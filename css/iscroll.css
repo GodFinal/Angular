@@ -1,0 +1,71 @@
+.artical {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+.wrapper {
+    x-position: absolute;
+    position: relative;
+    z-index: 1;
+    x-top: 0;
+    x-bottom: 0;
+    x-left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 400;
+    background: url("../images/logo.png") center 10px no-repeat;
+    background-size: 50px;
+}
+
+.scroller {
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+    background-color: #EFEFEF;
+}
+
+.scroller ul {
+}
+
+.scroller .ui-block {
+    padding: 10px 12px;
+    display: -webkit-box;
+    display: box;
+    font-size: 12px;
+}
+.scroller .ui-block div {
+}
+.pullUp {
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+}
+.pullUp .pullUp_icon {
+    background: url('images/loading.gif') center center no-repeat;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    background-size: 35px;
+    margin: 0 auto;
+}

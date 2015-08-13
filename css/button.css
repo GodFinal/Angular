@@ -1,0 +1,48 @@
+.button {
+	color: #fff;
+    background: #0079FF;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin: 4px 0;
+    height: 28px;
+    min-width: 70px;
+    border: 1px solid #0079FF;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+}
+.button:active, .button[active], .button.active {
+    opacity:.6;
+}
+.button.disabled, .button[disabled] {
+    pointer-events: none;
+    color: #FFF;
+    border-color: #a6a6a6;
+    background: #a6a6a6;
+    opacity: 0.6;
+}
+
+.button.block {
+    height: 37px;
+    padding: 10px;
+    font-size: 17px;
+    line-height: 17px;
+    width: 100%;
+}
+.btn_menu {
+	padding-top: 10px;
+	padding-left: 10px;
+}
+.btn_menu em{
+	width: 25px;
+	height: 2px;
+	background-color: black;
+	display: block;
+	margin-top: 5px;
+}
