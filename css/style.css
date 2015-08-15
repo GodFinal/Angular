@@ -1,3 +1,12 @@
+/* 背景 #FFF
+ * 背景 #F8F8F8
+ * 
+ * 前景色 #50d2c2
+ * 
+ * 文字（灰）#a8a8aa
+ * 文字（黑）#1d1d26
+ * */
+
 #main {
 	text-align: center;
 }
@@ -6,13 +15,80 @@
 	margin: 10px auto;
 	max-height: 100px;
 }
-#main .button{
+#main .button {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	-webkit-transform: translate(-50%,-50%);
-	-moz-transform: translate(-50%,-50%);
-	-ms-transform: translate(-50%,-50%);
-	-o-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+article h2,
+article h3 {
+	background-color: #F8F8F8;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 10px;
+}
+article p {
+	background-color: white;
+	text-indent: 2em;
+	word-break: break-all;
+	padding: 5px 10px;
+	line-height: 20px;
+}
+article table {
+	width: 100%;
+	margin-bottom: 10px;
+}
+article table th {
+	color: #FFF;
+	background-color: #50d2c2;
+	border: 1px solid #DFE0E1;
+	padding: 3px;
+	text-align: center;
+}
+article table td {
+	border: 1px solid #DFE0E1;
+	padding: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+article table tr:nth-child(odd) {
+	background-color: #F8F8F8;
+}
+article em {
+	text-indent: 0;
+	font-weight: bold;
+	margin: 0 3px;
+	color: #C7254E;
+}
+article .code {
+	padding: 10px;
+	line-height: 30px;
+}
+article .source_code {
+	padding: 10px;
+	font-family: 'Consolas', 'Courier New';
+	font-size: 10px;
+	word-break: break-all;
+	color: black;
+}
+/*高亮设置*/
+
+.source_code .tag {
+	color: blue;
+}
+.source_code .tag-name,
+.source_code .string {
+	color: #800000;
+}
+.source_code .attribute {
+	color: red;
+}
+.source_code .attribute-value,
+.source_code .keyword {
+	color: blue
 }

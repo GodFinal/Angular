@@ -544,10 +544,14 @@ var Zepto = (function() {
       return $.map(this, function(el){ return el[property] })
     },
     show: function(){
+    	var _this=this;
       return this.each(function(){
         this.style.display == "none" && (this.style.display = '')
-        if (getComputedStyle(this, '').getPropertyValue("display") == "none")
-          this.style.display = defaultDisplay(this.nodeName)
+        if (getComputedStyle(this, '').getPropertyValue("display") == "none"){
+        	this.style.opacity = 0;
+        	this.style.display = defaultDisplay(this.nodeName);
+        	_this.animate({opacity: 1}, 100, 'linear'); 
+				}
       })
     },
     replaceWith: function(newContent){
@@ -594,7 +598,11 @@ var Zepto = (function() {
       return this.map(function(){ return this.cloneNode(true) })
     },
     hide: function(){
-      return this.css("display", "none")
+			return this.animate({opacity: 0}, 100, 'linear',function(){
+
+				this.style.display = "none";
+			});
+      
     },
     toggle: function(setting){
       return this.each(function(){
@@ -1863,27 +1871,4 @@ window.$ === undefined && (window.$ = Zepto)
         return this.on(eventName, callback) 
     }
   });
-})(Zepto)
-
-//     query
-
-; (function ($) {
-
-    var _getQuery = function (key) {
-        var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
-        var r = window.location.search.substr(1).match(reg);
-        if (r != null) return decodeURI(r[2]); return null;
-    },
-        _setQuery = function () { },
-        _removeQuery = function () { },
-        _empty = function () { },
-        _copy = function () { };
-    $.query = {
-
-        get: _getQuery,
-        set: _setQuery,
-        remove: _removeQuery,
-        empty: _empty,
-        copy: _copy
-    }
 })(Zepto)

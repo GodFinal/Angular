@@ -29,32 +29,39 @@ aside.active{
     display: -webkit-box;
     display: box;
 }
-.aside-close{
-    position: absolute;
-    top:0;
-    color: #ECF0F1;
-    padding: 10px;
-}
-aside[data-position="left"] .aside-close{
-    right: 0;
-}
-aside[data-position="right"] .aside-close{
-    left: 0;
-}
+
 aside > *{
     -webkit-box-flex : 0;
 }
 aside>.header{
     overflow: hidden;
-    height: 44px;
-    line-height: 44px;
+    padding: 20px 0;
     text-align: center;
     font-size: 1.2em;
     font-weight: bold;
 }
+aside>.header .circle{
+	display: inline-block;
+	background-color: #F8F8F8;
+	height: 80px;
+	width: 80px;
+	padding: 10px;
+	border: 2px solid #50d2c2;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+aside>.header .circle img{
+	height: 100%;
+	width: 100%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
 aside>.center{
     -webkit-box-flex : 1;
     overflow: hidden;
+    position: relative;
 }
 aside ul.menu li {
     border-bottom: 1px solid rgba(0, 0, 0, .1);

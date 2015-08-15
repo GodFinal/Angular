@@ -1,116 +1,298 @@
 <!DOCTYPE html>
 <html>
-
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
-		<link rel="stylesheet" type="text/css" href="css/layout.css" />
-		<link rel="stylesheet" type="text/css" href="css/header.css" />
-		<link rel="stylesheet" type="text/css" href="css/footer.css" />
-		<link rel="stylesheet" type="text/css" href="css/aside.css" />
-		<link rel="stylesheet" type="text/css" href="css/list.css" />
-		<link rel="stylesheet" type="text/css" href="css/button.css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" type="text/css" href="css/animate.css" />
-		<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/fastclick.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/sapp.js" type="text/javascript" charset="utf-8"></script>
-	</head>
-
-	<body>
-		<!--侧边抽屉菜单-->
-		<div id="aside_container">
-			<aside id="menu_list" data-position="left" data-transition="push">
-				<div class="header">左侧菜单</div>
-				<div class="center" data-role="scroll">
-					<ul data-role="list" data-pos="right_icon">
-						<li><a href="#introduction" data-target="section">简介</a></li>
-						<li><a href="#double_bind_data" data-target="section">双向数据绑定</a></li>
-						<li><a href="#popup" data-target="section">弹窗及提示</a></li>
-						<li><a href="#menu" data-target="section">Menu侧边栏</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-						<li><a href="?url=123&data=ss#load" data-target="section">上拉加载及图片懒加载</a></li>
-					</ul>
-				</div>
-			</aside>
-		</div>
-		<div id="section_container">
-			<section id="main" class="active">
-				<img src="images/AngularJS.jpg" alt="angular">
-				<h1>Angular入门教程</h1>
-				<p>GodFinal</p>
-				<a class="button" href="#menu_list" data-target="menu">开始学习</a>
-			</section>
-			<section id="introduction">
-				<header>
-					<nav class="left">
-						<a class="btn_menu" href="#menu_list" data-target="menu">
-							<em></em>
-							<em></em>
-							<em></em>
-						</a>
-					</nav>
-					<h1 class="title">
-						AngularJS 简介
-					</h1>
-				</header>
-				<article class="active" data-role="scroll">
-					<div>
-
-						<div>AngularJS是为了克服HTML在构建应用上的不足而设计的。HTML是一门很好的为静态文本展示设计的声明式语言，但要构建WEB应用的话它就显得乏力了。所以我做了一些工作（你也可以觉得是小花招）来让浏览器做我想要的事。 通常，我们是通过以下技术来解决静态网页技术在构建动态应用上的不足： 类库 - 类库是一些函数的集合，它能帮助你写WEB应用。起主导作用的是你的代码，由你来决定何时使用类库。类库有：jQuery等 框架 - 框架是一种特殊的、已经实现了的WEB应用，你只需要对它填充具体的业务逻辑。这里框架是起主导作用的，由它来根据具体的应用逻辑来调用你的代码。框架有：knockout、sproutcore等。
-							AngularJS使用了不同的方法，它尝试去补足HTML本身在构建应用方面的缺陷。AngularJS通过使用我们称为标识符(directives)的结构，让浏览器能够识别新的语法。例如： 使用双大括号{{}}语法进行数据绑定； 使用DOM控制结构来实现迭代或者隐藏DOM片段； 支持表单和表单的验证； 能将逻辑代码关联到相关的DOM元素上； 能将HTML分组成可重用的组件。 端对端的解决方案 AngularJS试图成为WEB应用中的一种端对端的解决方案。这意味着它不只是你的WEB应用中的一个小部分，而是一个完整的端对端的解决方案。这会让AngularJS在构建一个CRUD（增加Create、查询Retrieve、更新Update、删除Delete）的应用时显得很“固执”（原文为
-							opinionated,意指没有太多的其他方式）。但是，尽管它很“固执”，它仍然能确保它的“固执”只是在你构建应用的起点，并且你仍能灵活变动。AngularJS的一些出众之处如下： 构建一个CRUD应用可能用到的全部内容包括：数据绑定、基本模板标识符、表单验证、路由、深度链接、组件重用、依赖注入。 测试方面包括：单元测试、端对端测试、模拟和自动化测试框架。 具有目录布局和测试脚本的种子应用作为起点。 AngularJS的可爱之处 AngularJS通过为开发者呈现一个更高层次的抽象来简化应用的开发。如同其他的抽象技术一样，这也会损失一部分灵活性。换句话说，并不是所有的应用都适合用AngularJS来做。AngularJS主要考虑的是构建CRUD应用。幸运的是，至少90%的WEB应用都是CRUD应用。但是要了解什么适合用AngularJS构建，就得了解什么不适合用AngularJS构建。
-							如游戏，图形界面编辑器，这种DOM操作很频繁也很复杂的应用，和CRUD应用就有很大的不同，它们不适合用AngularJS来构建。像这种情况用一些更轻量、简单的技术如jQuery可能会更好。
-						</div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="css/aside.css" />
+    <link rel="stylesheet" type="text/css" href="css/list.css" />
+    <link rel="stylesheet" type="text/css" href="css/button.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/fastclick.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sapp.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <!--侧边抽屉菜单-->
+    <div id="aside_container">
+        <aside id="menu_list" data-position="left" data-transition="push">
+            <div class="header">
+                <div class="circle">
+                    <img src="images/AngularJS.jpg" alt="" /></div>
+            </div>
+            <div class="center" data-role="scroll">
+                <ul data-role="list" data-pos="right_icon">
+                    <li><a href="#introduction" data-target="section">简介</a></li>
+                    <li><a href="#bind_data" data-target="section">双向数据绑定</a></li>
+                    <li><a href="#control_model" data-target="section">简单控制器</a></li>
+                    <li><a href="#data_repeat" data-target="section">数据循环</a></li>
+                    <li><a href="#filter" data-target="section">过滤器</a></li>
+                    <li><a href="#custom_filter" data-target="section">自定义过滤器</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <div id="section_container" ng-app="app">
+        <section id="main" class="active">
+            <img src="images/AngularJS.jpg" alt="angular">
+            <h1>
+                Angular入门教程</h1>
+            <p>
+                GodFinal</p>
+            <a class="button" href="#menu_list" data-target="menu">开始学习</a>
+        </section>
+        <section id="introduction">
+            <header>
+                <nav class="left">
+                    <a class="btn_menu" href="#menu_list" data-target="menu"><em></em><em></em><em></em>
+                    </a>
+                </nav>
+                <h1 class="title">
+                    AngularJS 简介
+                </h1>
+            </header>
+            <article class="active" data-role="scroll">
+                <div>
+                    <div>
+                        <h1>
+                            什么是 AngularJS?</h1>
+                        <p>
+                            AngularJS 是一个为动态WEB应用设计的结构框架。它能让你使用HTML作为模板语言，通过扩展HTML的语法，让你能更清楚、简洁地构建你的应用组件。它的创新点在于，利用
+                            数据绑定 和 依赖注入，它使你不用再写大量的代码了。这些全都是通过浏览器端的Javascript实现，这也使得它能够完美地和任何服务器端技术结合。</p>
+                        <p>
+                            AngularJS是为了克服HTML在构建应用上的不足而设计的。HTML是一门很好的为静态文本展示设计的声明式语言，但要构建WEB应用的话它就显得乏力了。所以我做了一些工作（你也可以觉得是小花招）来让浏览器做我想要的事。formatDate</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section id="bind_data">
+            <header>
+                <nav class="left">
+                    <a class="btn_menu" href="#menu_list" data-target="menu"><em></em><em></em><em></em>
+                    </a>
+                </nav>
+                <h1 class="title">
+                    数据绑定
+                </h1>
+            </header>
+            <article class="active" data-role="scroll">
+                <div>
+                    <h2>
+                        AngularJS 扩展了 HTML</h2>
+                    <p>
+                        相对与原来的HTML的编写模式，AngularJS 对于DOM的操作可谓是超前的，它不再仅仅是通过JS/Jquery等操作DOM，而是有它自己的一套数据绑定方式。</p>
+                    <p>
+                        首先，当然是要引用 AngularJS，其次使用<em>ng-app</em>来指定哪一块DOM区域是 AngularJS 的操作区域，这个节点可以是html、body或者某个其它标签。只有在<em>ng-app</em>所在标签下的所有
+                        AngularJS 操作才能起作用。使用<em>ng-model</em>绑定标签的值到 AngularJS。这样在 AngularJS 脚本中通过<em>ng-model</em>的值就可以访问到这个标签的值，也可以通过它来修改标签的值。<em>{{}}</em>是 AngularJS 中的数据绑定表达式，可以直接绑定变量到标签中。</p>
+                    <h3>
+                        例子：</h3>
+                    <div class="code">
+                        <input type="text" placeholder="姓名：" ng-model="userName" />
+                        <br />
+                        性别：
+                        <label>
+                            <input type="radio" name="sex" value="男" ng-model="userSex" />男</label>
+                        <label>
+                            <input type="radio" name="sex" value="女" ng-model="userSex" />女</label>
+                        <br />
+                        婚否：
+                        <label>
+                            <input type="checkbox" ng-model="isMarried" />已婚</label>
+                        <br />
+                        您的信息： <span>{{userName+" "+userSex+" "+isMarried}}</span>
+                    </div>
+                    <h3>
+                        源码：</h3>
+                    <div class="source_code">
+                        <ol start="1" class="dp-xml"><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">div</span><span>&nbsp;</span><span class="attribute">class</span><span>=</span><span class="attribute-value">"code"</span><span>&nbsp;</span><span class="attribute">ng-app</span><span>=</span><span class="attribute-value">""</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"text"</span><span>&nbsp;</span><span class="attribute">placeholder</span><span>=</span><span class="attribute-value">"姓名："</span><span>&nbsp;</span><span class="attribute">ng-model</span><span>=</span><span class="attribute-value">"userName"</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">br</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;性别：&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">label</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"radio"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"sex"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"男"</span><span>&nbsp;</span><span class="attribute">ng-model</span><span>=</span><span class="attribute-value">"userSex"</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>男</span><span class="tag">&lt;/</span><span class="tag-name">label</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">label</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"radio"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"sex"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"女"</span><span>&nbsp;</span><span class="attribute">ng-model</span><span>=</span><span class="attribute-value">"userSex"</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>女</span><span class="tag">&lt;/</span><span class="tag-name">label</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">br</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;婚否：&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">label</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"checkbox"</span><span>&nbsp;</span><span class="attribute">ng-model</span><span>=</span><span class="attribute-value">"isMarried"</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>已婚</span><span class="tag">&lt;/</span><span class="tag-name">label</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">br</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;您的信息：&nbsp;<span class="tag">&lt;</span><span class="tag-name">span</span><span class="tag">&gt;</span><span>{{</span><span>userName+"&nbsp;"+userSex+"&nbsp;"+isMarried</span><span>}}</span><span class="tag">&lt;/</span><span class="tag-name">span</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;/</span><span class="tag-name">div</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section id="control_model">
+            <header>
+                <nav class="left">
+                    <a class="btn_menu" href="#menu_list" data-target="menu"><em></em><em></em><em></em>
+                    </a>
+                </nav>
+                <h1 class="title">
+                    简单控制器
+                </h1>
+            </header>
+            <article class="active" data-role="scroll">
+                <div>
+                    <h2>
+                        AngularJS 控制器</h2>
+                    <p><em>ng-controller</em>是 AngularJS 的应用程序控制器，通过脚本获取控制器后就可以随心所欲的操作 AngularJS 了。</p>
+                    <p><em>$scope</em>是控制器中 AngularJS 的模型对象，它就相当于一个作用域对象，通过它我们就可以去操作变量或者方法等了。</p>
+                 <h3>
+                        例子：</h3>
+                    <div class="code" ng-controller="userNameCtrl">
+                        <input type="text" placeholder="姓：" ng-model="firstName" />
+                        <input type="text" placeholder="名：" ng-model="lastName" />
+                        <br />
+                                                全名： <span>{{fullName()}}</span>
+                    </div>
+                    <script type="text/javascript">
+                    	var App = angular.module('app', []);
+						App.controller('userNameCtrl', function($scope) {
+    						$scope.firstName = "God";
+    						$scope.lastName = "Final";
+    						$scope.fullName = function() {
+        						return this.firstName + " " + this.lastName;
+    						}
+						});
+                    </script>
+                    <h3>
+                        源码：</h3>
+                    <div class="source_code">
+                    	<ol start="1" class="dp-xml"><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">div</span><span>&nbsp;</span><span class="attribute">class</span><span>=</span><span class="attribute-value">"code"</span><span>&nbsp;</span><span class="attribute">ng-app</span><span>=</span><span class="attribute-value">"userNameApp"</span><span>&nbsp;</span><span class="attribute">ng-controller</span><span>=</span><span class="attribute-value">"userNameCtrl"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"text"</span><span>&nbsp;</span><span class="attribute">placeholder</span><span>=</span><span class="attribute-value">"姓："</span><span>&nbsp;</span><span class="attribute">ng-model</span><span>=</span><span class="attribute-value">"firstName"</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"text"</span><span>&nbsp;</span><span class="attribute">placeholder</span><span>=</span><span class="attribute-value">"名："</span><span>&nbsp;</span><span class="attribute">ng-model</span><span>=</span><span class="attribute-value">"lastName"</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">br</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;全名：&nbsp;<span class="tag">&lt;</span><span class="tag-name">span</span><span class="tag">&gt;</span><span>{{</span><span>fullName()</span><span>}}</span><span class="tag">&lt;/</span><span class="tag-name">span</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;/</span><span class="tag-name">div</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">script</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"text/javascript"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">var</span><span>&nbsp;userNameApp&nbsp;=&nbsp;angular.module(</span><span class="string">"userNameApp"</span><span>,&nbsp;[]);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;userNameApp.controller(<span class="string">"personCtrl"</span><span>,&nbsp;</span><span class="keyword">function</span><span>&nbsp;($scope)&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$scope.firstName&nbsp;=&nbsp;<span class="string">"God"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$scope.lastName&nbsp;=&nbsp;<span class="string">"Final"</span><span>;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$scope.fullName&nbsp;=&nbsp;<span class="keyword">function</span><span>&nbsp;()&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;</span><span class="keyword">this</span><span>.firstName&nbsp;+&nbsp;</span><span class="string">"&nbsp;"</span><span>&nbsp;+&nbsp;</span><span class="keyword">this</span><span>.lastName;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;});&nbsp;&nbsp;</span></li><li class=""><span><span class="tag">&lt;/</span><span class="tag-name">script</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section id="data_repeat">
+            <header>
+                <nav class="left">
+                    <a class="btn_menu" href="#menu_list" data-target="menu"><em></em><em></em><em></em>
+                    </a>
+                </nav>
+                <h1 class="title">
+                    数据循环
+                </h1>
+            </header>
+            <article class="active" data-role="scroll">
+                <div>
+                    <h2>
+                        数据循环控制</h2>
+                    <p><em>ng-repeat</em>是 AngularJS 的数据循环控制器，控制标签的循环生成。</p>
+                 <h3>
+                        例子：</h3>
+                    <div class="code">
+                        <ul ng-controller="userListCtrl">
+                        	<li ng-repeat="user in users">
+                        		{{$index+"."+user.name}}
+                        	</li>
+                        </ul>
+                    </div>
+                    <script type="text/javascript">
+						App.controller('userListCtrl', function($scope) {
+    						$scope.users = [{name:"Jim"},{name:"Tom"},{name:"Jack"},{name:"Flank"}];
+						});
+                    </script>
+                    <h3>
+                        源码：</h3>
+                    <div class="source_code">
+                    	<ol start="1" class="dp-xml"><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">ul</span><span>&nbsp;</span><span class="attribute">ng-app</span><span>=</span><span class="attribute-value">"app"</span><span>&nbsp;</span><span class="attribute">ng-controller</span><span>=</span><span class="attribute-value">"userListCtrl"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">li</span><span>&nbsp;</span><span class="attribute">ng-repeat</span><span>=</span><span class="attribute-value">"user&nbsp;in&nbsp;users"</span><span class="tag">&gt;</span><span>{{</span><span>$index+"."+user.name</span><span>}}</span><span class="tag">&lt;/</span><span class="tag-name">li</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;/</span><span class="tag-name">ul</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">script</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"text/javascript"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;angular.module(</span><span class="string">"app"</span><span>,&nbsp;[]).controller(</span><span class="string">"userListCtrl"</span><span>,&nbsp;<span class="keyword">function</span><span>&nbsp;($scope)&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$scope.users&nbsp;=&nbsp;[{&nbsp;name:&nbsp;<span class="string">"Jim"</span><span>&nbsp;},&nbsp;{&nbsp;name:&nbsp;</span><span class="string">"Tom"</span><span>&nbsp;},&nbsp;{&nbsp;name:&nbsp;</span><span class="string">"Jack"</span><span>&nbsp;},&nbsp;{&nbsp;name:&nbsp;</span><span class="string">"Flank"</span><span>}];&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;});&nbsp;&nbsp;</span></li><li class="alt"><span><span class="tag">&lt;/</span><span class="tag-name">script</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol>
 					</div>
-				</article>
-			</section>
-			<section id="double_bind_data">
-				<header>
-					<nav class="left">
-						<a class="btn_menu" href="#menu_list" data-target="menu">
-							<em></em>
-							<em></em>
-							<em></em>
-						</a>
-					</nav>
-					<h1 class="title">
-						双向数据绑定
-					</h1>
-				</header>
-				<article class="active" data-role="scroll">
-					<div>
-						<div></div>
-					</div>
-				</article>
-			</section>
-		</div>
-		<script type="text/javascript">
-			SApp.launch();
+                </div>
+            </article>
+        </section>
+        <section id="filter">
+            <header>
+                <nav class="left">
+                    <a class="btn_menu" href="#menu_list" data-target="menu"><em></em><em></em><em></em>
+                    </a>
+                </nav>
+                <h1 class="title">
+                    过滤器
+                </h1>
+            </header>
+            <article class="active" data-role="scroll">
+                <div>
+                    <h2>
+                        AngularJS 过滤器</h2>
+                    <p>过滤器通过字符<em>|</em>添加到表达式中，不仅仅可以进行数据过滤和格式化，还可以进行数据转换。</p>
+                    <table>
+                    	<tr> 
+                    		<th style="width:20%">过滤器</th> 
+                    		<th>描述</th> 
+                    	</tr> 
+                    	<tr> 
+                    		<td>currency</td> 
+                    		<td>格式化数字为货币格式。</td> 
+                    	</tr> 
+                    	<tr> 
+                    		<td>filter</td> 
+                    		<td>从数组项中选择一个子集。</td> 
+                    	</tr> 
+                    	<tr>
+                    		<td>lowercase</td>
+                    		<td>格式化字符串为小写。</td> 
+                    	</tr> 
+                    	<tr> 
+                    		<td>orderBy</td> 
+                    		<td>根据某个表达式排列数组。</td>
+                    	</tr> 
+                    	<tr> 
+                    		<td>uppercase</td> 
+                    		<td>格式化字符串为大写。</td>
+                    	</tr> 
+                    </table>
+                 <h3>
+                        例子：</h3>
+                    <div class="code">
+                        <div ng-init="goods=[{name:'Apple',price:3.4},{name:'Orange',price:5.25},{name:'Bananer',price:2.5}]">
+                        </div>
+                        <div>大写：{{goods[0].name|uppercase}}</div>
+						<div>小写：{{goods[0].name|lowercase}}</div>
+						<div>货币格式：{{goods[0].price|currency}}</div>
+						<div>过滤：{{goods|filter:'n'}}</div>
+						<div>排序：{{goods|orderBy:'price'}}</div>
+                    </div>
+                    <h3>
+                        源码：</h3>
+                    <div class="source_code">
+                    	<ol start="1" class="dp-xml"><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">div</span><span>&nbsp;</span><span class="attribute">ng-init</span><span>=</span><span class="attribute-value">"goods=[{name:'Apple',price:3.4},{name:'Orange',price:5.25},{name:'Bananer',price:2.5}]"</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">div</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>大写：</span><span>{{</span><span>goods[0].name|uppercase</span><span>}}</span><span class="tag">&lt;/</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>小写：</span><span>{{</span><span>goods[0].name|lowercase</span><span>}}</span><span class="tag">&lt;/</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>货币格式：</span><span>{{</span><span>goods[0].price|currency</span><span>}}</span><span class="tag">&lt;/</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>过滤：</span><span>{{</span><span>goods|filter:'n'</span><span>}}</span><span class="tag">&lt;/</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>排序：</span><span>{{</span><span>goods|orderBy:'price'</span><span>}}</span><span class="tag">&lt;/</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section id="custom_filter">
+            <header>
+                <nav class="left">
+                    <a class="btn_menu" href="#menu_list" data-target="menu"><em></em><em></em><em></em>
+                    </a>
+                </nav>
+                <h1 class="title">
+                    自定义过滤器
+                </h1>
+            </header>
+            <article class="active" data-role="scroll">
+                <div>
+                    <h2>
+                        AngularJS 自定义过滤器</h2>
+                    <p>有的时候，简简单单的过滤器已经满足不了我们的业务逻辑需求，所以我们就要对过滤器进行扩展。</p>
+                 <h3>
+                        例子：</h3>
+                    <div class="code">
+                        <div ng-init="goods=[{name:'Apple',price:3.4},{name:'Orange',price:5.25},{name:'Bananer',price:2.5}]">
+                        </div>
+                        <div>大写：{{goods[0].name|uppercase}}</div>
+						<div>小写：{{goods[0].name|lowercase}}</div>
+						<div>货币格式：{{goods[0].price|currency}}</div>
+						<div>过滤：{{goods|filter:'n'}}</div>
+						<div>排序：{{goods|orderBy:'price'}}</div>
+                    </div>
+                    <h3>
+                        源码：</h3>
+                    <div class="source_code">
+                    	<ol start="1" class="dp-xml"><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">div</span><span>&nbsp;</span><span class="attribute">ng-init</span><span>=</span><span class="attribute-value">"goods=[{name:'Apple',price:3.4},{name:'Orange',price:5.25},{name:'Bananer',price:2.5}]"</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">div</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>大写：</span><span>{{</span><span>goods[0].name|uppercase</span><span>}}</span><span class="tag">&lt;/</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>小写：</span><span>{{</span><span>goods[0].name|lowercase</span><span>}}</span><span class="tag">&lt;/</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>货币格式：</span><span>{{</span><span>goods[0].price|currency</span><span>}}</span><span class="tag">&lt;/</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>过滤：</span><span>{{</span><span>goods|filter:'n'</span><span>}}</span><span class="tag">&lt;/</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>排序：</span><span>{{</span><span>goods|orderBy:'price'</span><span>}}</span><span class="tag">&lt;/</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+    <script type="text/javascript">
+        SApp.launch();
+        FastClick.attach(document.body);
 		</script>
-	</body>
-
+</body>
 </html>

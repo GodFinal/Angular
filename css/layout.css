@@ -87,8 +87,8 @@ article.active{
     visibility: visible;
     display: block;
     z-index: 1;
-    background-color: #F0F0F0;
 }
+
 header,footer{
     position: absolute;
     left: 0;

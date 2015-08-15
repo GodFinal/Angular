@@ -1,15 +1,14 @@
 .button {
 	color: #fff;
-    background: #0079FF;
+    background: #50d2c2;
     display: inline-block;
     border-radius: 4px;
-    padding: 6px 10px;
+    padding: 0 20px;
     margin: 4px 0;
-    height: 28px;
+    height: 38px;
     min-width: 70px;
-    border: 1px solid #0079FF;
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 16px;
+    line-height: 38px;
     text-align: center;
     cursor: pointer;
     outline: none;
@@ -40,9 +39,9 @@
 	padding-left: 10px;
 }
 .btn_menu em{
-	width: 25px;
+	width: 23px;
 	height: 2px;
-	background-color: black;
+	background-color: #a8a8aa;
 	display: block;
 	margin-top: 5px;
 }

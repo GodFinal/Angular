@@ -1,3 +1,4 @@
+
 var SApp = {
 	version: '1.0',
 	//参数设置
@@ -21,6 +22,9 @@ var SApp = {
 	 * @param opts {object}
 	 */
 	launch: function() {
+		$(document).on('touchmove', function (e) {
+                return e.preventDefault();
+            });
 		this.Element.init("#aside_container");
 		this.Element.init("#section_container");
 		this.Router.init();
@@ -279,8 +283,8 @@ SApp.Transition = (function() {
 			$current = $(current);
 			$target = $(target);
 			//$current.bind('webkitAnimationEnd.jingle', _finishTransition).addClass('anim ' + c_class);
-			$current.removeClass('active');
-			$target.addClass('active');
+			$current.removeClass('active').find('article.active').trigger('articlehide');
+			$target.addClass('active').find('article.active').trigger('articleshow');
 			$current = null; //释放
 			$target = null; //释放
 		}

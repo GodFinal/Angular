@@ -313,9 +313,6 @@ function IScroll (el, options) {
 
 	this.options.invertWheelDirection = this.options.invertWheelDirection ? -1 : 1;
 
-	if ( this.options.probeType == 3 ) {
-		this.options.useTransition = false;	}
-
 // INSERT POINT: NORMALIZATION
 
 	// Some defaults	
@@ -324,7 +321,7 @@ function IScroll (el, options) {
 	this.directionX = 0;
 	this.directionY = 0;
 	this._events = {};
-	this.inLoading = false;
+
 // INSERT POINT: DEFAULTS
 
 	this._init();
@@ -511,23 +508,17 @@ IScroll.prototype = {
 		}
 
 		this.moved = true;
-
+		
 		this._translate(newX, newY);
 
 /* REPLACE START: _move */
+
 		if ( timestamp - this.startTime > 300 ) {
 			this.startTime = timestamp;
 			this.startX = this.x;
 			this.startY = this.y;
-
-			if ( this.options.probeType == 1 ) {
-				this._execEvent('scroll');
-			}
 		}
 
-		if ( this.options.probeType > 1 ) {
-			this._execEvent('scroll');
-		}
 /* REPLACE END: _move */
 
 	},
@@ -540,9 +531,6 @@ IScroll.prototype = {
 		if ( this.options.preventDefault && !utils.preventDefaultException(e.target, this.options.preventDefaultException) ) {
 			e.preventDefault();
 		}
-		if (this.moved) {
-                this._execEvent('scrollStartEnd');
-            	}
 
 		var point = e.changedTouches ? e.changedTouches[0] : e,
 			momentumX,
@@ -710,13 +698,10 @@ IScroll.prototype = {
 		this._execEvent('refresh');
 
 		this.resetPosition();
-		this.inLoading = false;
+
 // INSERT POINT: _refresh
 
 	},
-	setEnd: function () {
-            this.inLoading = true;
-        },
 
 	on: function (type, fn) {
 		if ( !this._events[type] ) {
@@ -992,11 +977,6 @@ IScroll.prototype = {
 		}
 
 		if ( this.options.fadeScrollbars ) {
-			this.on('scrollStartEnd', function () {
-                    		_indicatorsMap(function () {
-                        		this.fade();
-                    		});
-                	});
 			this.on('scrollEnd', function () {
 				_indicatorsMap(function () {
 					this.fade();
@@ -1019,6 +999,10 @@ IScroll.prototype = {
 				_indicatorsMap(function () {
 					this.fade(1, true);
 				});
+				var el = document.activeElement;
+ 					if (el.nodeName.toLowerCase() == 'input') {
+   					el.blur();
+				}
 			});
 		}
 
@@ -1137,10 +1121,6 @@ IScroll.prototype = {
 		}
 
 		this.scrollTo(newX, newY, 0);
-
-		if ( this.options.probeType > 1 ) {
-			this._execEvent('scroll');
-		}
 
 // INSERT POINT: _wheel
 	},
@@ -1530,7 +1510,7 @@ IScroll.prototype = {
 			if ( now >= destTime ) {
 				that.isAnimating = false;
 				that._translate(destX, destY);
-				
+
 				if ( !that.resetPosition(that.options.bounceTime) ) {
 					that._execEvent('scrollEnd');
 				}
@@ -1547,16 +1527,11 @@ IScroll.prototype = {
 			if ( that.isAnimating ) {
 				rAF(step);
 			}
-
-			if ( that.options.probeType == 3 ) {
-				that._execEvent('scroll');
-			}
 		}
 
 		this.isAnimating = true;
 		step();
 	},
-
 	handleEvent: function (e) {
 		switch ( e.type ) {
 			case 'touchstart':
@@ -1614,7 +1589,7 @@ function createDefaultScrollbar (direction, interactive, type) {
 
 	if ( type === true ) {
 		scrollbar.style.cssText = 'position:absolute;z-index:9999';
-		indicator.style.cssText = '-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:absolute;background:rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.9);border-radius:3px';
+		indicator.style.cssText = '-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:absolute;background:rgba(0,0,0,0.4);border-radius:1px';
 	}
 
 	indicator.className = 'iScrollIndicator';
@@ -1627,7 +1602,7 @@ function createDefaultScrollbar (direction, interactive, type) {
 		scrollbar.className = 'iScrollHorizontalScrollbar';
 	} else {
 		if ( type === true ) {
-			scrollbar.style.cssText += ';width:7px;bottom:2px;top:2px;right:1px';
+			scrollbar.style.cssText += ';width:2px;bottom:2px;top:2px;right:2px';
 			indicator.style.width = '100%';
 		}
 		scrollbar.className = 'iScrollVerticalScrollbar';
@@ -1792,15 +1767,6 @@ Indicator.prototype = {
 		newY = this.y + deltaY;
 
 		this._pos(newX, newY);
-
-
-		if ( this.scroller.options.probeType == 1 && timestamp - this.startTime > 300 ) {
-			this.startTime = timestamp;
-			this.scroller._execEvent('scroll');
-		} else if ( this.scroller.options.probeType > 1 ) {
-			this.scroller._execEvent('scroll');
-		}
-
 
 // INSERT POINT: indicator._move
 
